@@ -1,7 +1,8 @@
 // Ejercicio_1
 
-// Haga una función que tome como entrada un arreglo y retorne el máximo
-// valor del mismo;
+/*
+Haga una función que tome como entrada un arreglo y retorne el máximo valor del mismo;
+*/
 
 int valorMaximo(int *arr, int n){
 
@@ -16,9 +17,9 @@ int valorMaximo(int *arr, int n){
 
 // Ejercicio_2
 
-// Haga una acción que tome como entrada un arreglo A y un entero N y
-// retorne (usando parámetros por referencia) el número de elementos de A
-// mayores a N y su promedio;
+/*
+Haga una acción que tome como entrada un arreglo A y un entero N y retorne (usando parámetros por referencia) el número de elementos de A mayores a N y su promedio;
+*/
 
 void promedio(int *arr, int n, int a, int &elem, int &x){
 
@@ -36,8 +37,9 @@ void promedio(int *arr, int n, int a, int &elem, int &x){
 
 // Ejercicio_3
 
-// Haga una función que tome como entrada un string y retorne verdadero si
-// es capicúa;
+/*
+Haga una función que tome como entrada un string y retorne verdadero si es capicúa;
+*/
 
 bool palindrome(char *tex){
 
@@ -56,9 +58,9 @@ bool palindrome(char *tex){
 
 // Ejercicio_4
 
-// Haga una acción que tome como entrada un arreglo de enteros y retorne
-// (usando parámetros por referencia) el número de elementos pares e impares
-// del arreglo;
+/*
+Haga una acción que tome como entrada un arreglo de enteros y retorne (usando parámetros por referencia) el número de elementos pares e impares del arreglo;
+*/
 
 void imPar(int *arr, int ar[2], int n) {
 
@@ -71,9 +73,9 @@ void imPar(int *arr, int ar[2], int n) {
 
 // Ejercicio_5
 
-// Haga una acción que tome como entrada un arreglo de enteros A y un
-// elemento K y coloque K en las posiciones potencia de dos del arreglo (1,
-// 2, 4, 8, . . .);
+/*
+Haga una acción que tome como entrada un arreglo de enteros A y un elemento K y coloque K en las posiciones potencia de dos del arreglo (1, 2, 4, 8, . . .);
+*/
 
 bool potenciaDeDos(int n){
     for(int i = 1; i < 100; i++){
@@ -91,10 +93,9 @@ void cambio(int *arr, int n, int k) {
 
 // Ejercicio_6
 
-// Haga una acción que tome como entrada un arreglo A de enteros y un
-// número entero K y realice K desplazamientos circulares de A hacia la
-// izquierda. Por ejemplo, si A = {4, 6, −1, 2} y K = 2, el valor final de A
-// debe ser {−1, 2, 4, 6};
+/*
+Haga una acción que tome como entrada un arreglo A de enteros y un número entero K y realice K desplazamientos circulares de A hacia la izquierda. Por ejemplo, si A = {4, 6, −1, 2} y K = 2, el valor final de A debe ser {−1, 2, 4, 6};
+*/
 
 void circularArray(int arr[8], int ar[8], int n) {
     for(int i = 0; i < 8; i++) {
@@ -114,8 +115,9 @@ void circularArray(int arr[8], int ar[8], int n) {
 
 // Ejercicio_7
 
-// Dado un arreglo con valores entre 0 y 100 haga una función para determinar
-// el valor que má se repite;
+/*
+Dado un arreglo con valores entre 0 y 100 haga una función para determinar el valor que má se repite;
+*/
 
 void valorMasRepetido(int *arr, int *a, int n, int &num, int &numr) {
     for(int i = 0; i < n; i++) {
@@ -133,10 +135,9 @@ void valorMasRepetido(int *arr, int *a, int n, int &num, int &numr) {
 
 // Ejercicio_8
 
-// Haga una función que tome como entrada un arreglo de enteros A y un
-// número K y determine si existen dos valores de A que sumados sean
-// iguales a K. Por ejemplo, si A = {4, −1, 6, 8, 10, 3} y K = 2, la función
-// debe retornar verdadero ya que −1 + 3 = 2;
+/*
+Haga una función que tome como entrada un arreglo de enteros A y un número K y determine si existen dos valores de A que sumados sean iguales a K. Por ejemplo, si A = {4, −1, 6, 8, 10, 3} y K = 2, la función debe retornar verdadero ya que −1 + 3 = 2;
+*/
 
 int sumValores(int *arr, int n, int a) {
     for(int i = 0; i < n; i++) {
@@ -149,10 +150,9 @@ int sumValores(int *arr, int n, int a) {
 
 // Ejercicio_9
 
-// Dados dos arreglos ordenados de enteros A y B, haga una función que
-// permita obtener un tercer arreglo C que contenga todos los elementos de
-// A y B ordenados. Por ejemplo, si A = {1, 4, 9} y B = {2, 5, 10, 12}, el
-// resultado deberá ser C = {1, 2, 4, 5, 9, 10, 12};
+/*
+Dados dos arreglos ordenados de enteros A y B, haga una función que permita obtener un tercer arreglo C que contenga todos los elementos de A y B ordenados. Por ejemplo, si A = {1, 4, 9} y B = {2, 5, 10, 12}, el resultado deberá ser C = {1, 2, 4, 5, 9, 10, 12};
+*/
 
 void concatenarArray(int *arr, int *arb, int *arc, int n, int m) {
     int aux;
@@ -175,7 +175,9 @@ void concatenarArray(int *arr, int *arb, int *arc, int n, int m) {
 
 // Ejercicio_10
 
-// Haga una función que tome como entrada una matriz cuadrada de N×M y retorne la matriz traspuesta de M × N. Recuerde que la matriz traspuesta es aquella en donde se intercambian filas por columnas. Por ejemplo, si la matriz original es A = {{1, 5}, {2, 3}}, la función debe retornar {{1, 2}{5, 3}};
+/*
+Haga una función que tome como entrada una matriz cuadrada de N×M y retorne la matriz traspuesta de M × N. Recuerde que la matriz traspuesta es aquella en donde se intercambian filas por columnas. Por ejemplo, si la matriz original es A = {{1, 5}, {2, 3}}, la función debe retornar {{1, 2}{5, 3}};
+*/
 
 int** transpuesta(int **matriz, int n, int m){
 	int Tmatriz[m][n];
@@ -190,8 +192,9 @@ int** transpuesta(int **matriz, int n, int m){
 
 // Ejercicio_11
 
-// Haga una función que tome como entrada una matriz cuadrada y retorne
-// la suma de los elementos de la diagonal secundaria;
+/*
+Haga una función que tome como entrada una matriz cuadrada y retorne la suma de los elementos de la diagonal secundaria;
+*/
 
 int sumaDiagonal(int **matriz, int n){
 	int suma = 0, cont = n-1;
@@ -208,10 +211,9 @@ int sumaDiagonal(int **matriz, int n){
 
 // Ejercicio_12
 
-// Haga una acción que tome como entrada una matriz (con cantidad par
-// de filas) e intercambie las filas pares y las impares. Por ejemplo, si la
-// matriz es {{4, 2}, {1, 2}, {6, −1}, {3, 5}}, la matriz resultante debería ser
-// {{1, 2}, {4, 2}, {3, 5}, {6, −1}};
+/*
+Haga una acción que tome como entrada una matriz (con cantidad par de filas) e intercambie las filas pares y las impares. Por ejemplo, si la matriz es {{4, 2}, {1, 2}, {6, −1}, {3, 5}}, la matriz resultante debería ser {{1, 2}, {4, 2}, {3, 5}, {6, −1}};
+*/
 
 void intercambioFilas(int **matriz, int n, int m){
 	for(int i = 0; i < n; i++){
