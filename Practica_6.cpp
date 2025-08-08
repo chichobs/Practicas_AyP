@@ -1,3 +1,6 @@
+Aquí está el código corregido sin comentarios:
+
+```cpp
 // Ejercicio_1
 
 /*
@@ -26,6 +29,7 @@ Haga una acción que tome como entrada un arreglo A y un entero N y retorne (usa
 void promedio(int *arr, int n, int a, int &elem, int &x){
 
     int cont = 0;
+    elem = 0;
 
     for (int i = 0; i < n; i++){
         if(arr[i] > a){
@@ -33,8 +37,8 @@ void promedio(int *arr, int n, int a, int &elem, int &x){
             cont++;
         }
     }
-    
-    x = elem / cont; 
+
+    if(cont != 0) x = elem / cont; 
 }
 
 //==========================================================
@@ -50,12 +54,12 @@ bool palindrome(char *tex){
     int n = strlen(tex);
     int cont = 0;
     char rtex[100];
-    
+
     for(int i = 0, j = n-1; i < n; i++, j--){
         rtex[i] = tex[j];
         if(rtex[i] != tex[i]) cont++;
     }
-    
+
     if(cont == 0) return true;
     else return false;
 }
@@ -71,7 +75,6 @@ Haga una acción que tome como entrada un arreglo de enteros y retorne (usando p
 void imPar(int *arr, int ar[2], int n) {
 
     for(int i = 0; i < n; i++) {
-        cin >> arr[i];
         if(arr[i] % 2 == 0) ar[0]++;
         else ar[1]++;
     }
@@ -86,16 +89,15 @@ Haga una acción que tome como entrada un arreglo de enteros A y un elemento K y
 */
 
 bool potenciaDeDos(int n){
-    for(int i = 1; i < 100; i++){
-        if(n == pow(2, i)) return 1;
+    for(int i = 0; i < 100; i++){
+        if(n == pow(2, i)) return true;
     }
-    return 0;
+    return false;
 }
 
 void cambio(int *arr, int n, int k) {
     for(int i = 0; i < n; i++) {
-        cin >> arr[i];
-        if(po2(i) == true) arr[i] = k;
+        if(potenciaDeDos(i) == true) arr[i] = k;
     }
 }
 
@@ -108,18 +110,11 @@ Haga una acción que tome como entrada un arreglo A de enteros y un número ente
 */
 
 void circularArray(int arr[8], int ar[8], int n) {
-    for(int i = 0; i < 8; i++) {
-        cout << arr[i] << " ";
-    }
-    cout << "" << endl;
     for(int i = 0, j = n; i < 8-n; i++, j++) {
         ar[i] = arr[j];
     }
     for(int i = 8-n, j = 0; j < n; i++, j++) {
         ar[i] = arr[j];
-    }
-    for(int i = 0; i < 8; i++) {
-        cout << ar[i] << " ";
     }
 }
 
@@ -128,16 +123,14 @@ void circularArray(int arr[8], int ar[8], int n) {
 // Ejercicio_7
 
 /*
-Dado un arreglo con valores entre 0 y 100 haga una función para determinar el valor que má se repite;
+Dado un arreglo con valores entre 0 y 100 haga una función para determinar el valor que más se repite;
 */
 
 void valorMasRepetido(int *arr, int *a, int n, int &num, int &numr) {
     for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n; j++) {
-            if(i == arr[j]) a[arr[j]]++;
-        }
+        a[arr[i]]++;
     }
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i < 101; i++) {
         if(a[i] > num) {
             num = a[i];
             numr = i;
@@ -153,10 +146,10 @@ void valorMasRepetido(int *arr, int *a, int n, int &num, int &numr) {
 Haga una función que tome como entrada un arreglo de enteros A y un número K y determine si existen dos valores de A que sumados sean iguales a K. Por ejemplo, si A = {4, −1, 6, 8, 10, 3} y K = 2, la función debe retornar verdadero ya que −1 + 3 = 2;
 */
 
-int sumValores(int *arr, int n, int a) {
+bool sumValores(int *arr, int n, int a) {
     for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n; j++) {
-            if(arr[i] + arr[j] == a && i != j) return true;
+        for(int j = i+1; j < n; j++) {
+            if(arr[i] + arr[j] == a) return true;
         }
     }
     return false;
@@ -179,7 +172,7 @@ void concatenarArray(int *arr, int *arb, int *arc, int n, int m) {
         arc[i] = arb[j];
     }
     for(int i = 0; i < n+m; i++) {
-        for(int i = 0; i < n+m-1; i++) {
+        for(int j = 0; j < n+m-1; j++) {
             if(arc[j] > arc[j+1]) {
                 aux = arc[j];
                 arc[j] = arc[j+1];
@@ -198,14 +191,17 @@ Haga una función que tome como entrada una matriz cuadrada de N×M y retorne la
 */
 
 int** transpuesta(int **matriz, int n, int m){
-	int Tmatriz[m][n];
-	for(int i = 0; i < n; i++){
-		for(int j = 0; j < m; j++){
-			Tmatriz[j][i] = matriz[i][j];
-		}
-	}
+        int **Tmatriz = new int*[m];
+        for(int i = 0; i < m; i++){
+                Tmatriz[i] = new int[n];
+        }
+        for(int i = 0; i < n; i++){
+                for(int j = 0; j < m; j++){
+                        Tmatriz[j][i] = matriz[i][j];
+                }
+        }
 
-	return Tmatriz;
+        return Tmatriz;
 }
 
 //==========================================================
@@ -217,16 +213,14 @@ Haga una función que tome como entrada una matriz cuadrada y retorne la suma de
 */
 
 int sumaDiagonal(int **matriz, int n){
-	int suma = 0, cont = n-1;
-	
-	for(int i = 0; i < n; i++){
-		for(int j = 0; j < n; j++){
-			if(j == cont) suma += matriz[i][j];
-		}
-		cont--;
-	}
+        int suma = 0, cont = n-1;
 
-	return suma;
+        for(int i = 0; i < n; i++){
+                suma += matriz[i][cont];
+                cont--;
+        }
+
+        return suma;
 }
 
 //==========================================================
@@ -238,9 +232,10 @@ Haga una acción que tome como entrada una matriz (con cantidad par de filas) e 
 */
 
 void intercambioFilas(int **matriz, int n, int m){
-	for(int i = 0; i < n; i++){
-		for(int j = 0; j < m; j++){
-			if(i % 2 == 0) swap(matriz[i][j], matriz[i+1][j]);
-		}
-	}
+        for(int i = 0; i < n; i+=2){
+                for(int j = 0; j < m; j++){
+                        swap(matriz[i][j], matriz[i+1][j]);
+                }
+        }
 }
+```
