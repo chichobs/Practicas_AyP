@@ -15,6 +15,8 @@ int valorMaximo(int *arr, int n){
     return max;
 }
 
+//==========================================================
+
 // Ejercicio_2
 
 /*
@@ -34,6 +36,8 @@ void promedio(int *arr, int n, int a, int &elem, int &x){
     
     x = elem / cont; 
 }
+
+//==========================================================
 
 // Ejercicio_3
 
@@ -56,6 +60,8 @@ bool palindrome(char *tex){
     else return false;
 }
 
+//==========================================================
+
 // Ejercicio_4
 
 /*
@@ -70,6 +76,8 @@ void imPar(int *arr, int ar[2], int n) {
         else ar[1]++;
     }
 }
+
+//==========================================================
 
 // Ejercicio_5
 
@@ -90,6 +98,8 @@ void cambio(int *arr, int n, int k) {
         if(po2(i) == true) arr[i] = k;
     }
 }
+
+//==========================================================
 
 // Ejercicio_6
 
@@ -113,6 +123,8 @@ void circularArray(int arr[8], int ar[8], int n) {
     }
 }
 
+//==========================================================
+
 // Ejercicio_7
 
 /*
@@ -133,6 +145,8 @@ void valorMasRepetido(int *arr, int *a, int n, int &num, int &numr) {
     }
 }
 
+//==========================================================
+
 // Ejercicio_8
 
 /*
@@ -147,6 +161,8 @@ int sumValores(int *arr, int n, int a) {
     }
     return false;
 }
+
+//==========================================================
 
 // Ejercicio_9
 
@@ -173,6 +189,8 @@ void concatenarArray(int *arr, int *arb, int *arc, int n, int m) {
     }
 }
 
+//==========================================================
+
 // Ejercicio_10
 
 /*
@@ -189,6 +207,8 @@ int** transpuesta(int **matriz, int n, int m){
 
 	return Tmatriz;
 }
+
+//==========================================================
 
 // Ejercicio_11
 
@@ -208,6 +228,8 @@ int sumaDiagonal(int **matriz, int n){
 
 	return suma;
 }
+
+//==========================================================
 
 // Ejercicio_12
 
